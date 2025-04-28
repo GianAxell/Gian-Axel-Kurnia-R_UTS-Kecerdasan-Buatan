@@ -1,0 +1,58 @@
+1. Kasus:
+Seorang Petani ingin sistem AI yang bisa membantu menentukan jenis penyakit tanaman berdasarkan gejala berikut:
+
+1. Daun menguning
+Terdapat bercak hitam
+Daun berlubang
+Tanaman layu
+
+Jawaban:
+1. IF - THEN RULES:
+IF daun menguning THEN Busuk Akar
+IF terdapat bercak hitam THEN Karat Daun
+IF daun berlubang THEN Serangan Kumbang
+IF tanaman layu THEN Busuk Bakteri
+
+2. Logika Proposisional:
+
+P1: Daun menguning
+
+P2: Terdapat bercak hitam
+
+P3: Daun berlubang
+
+P4: Tanaman layu
+
+H1: Busuk Akar
+
+H2: Karat Daun
+
+H3: Serangan Kumbang
+
+H4: Busuk Bakteri
+
+Aturan proposisional:
+
+P1 → H1
+(Jika daun menguning, maka kemungkinan Busuk Akar)
+
+P2 → H2
+(Jika terdapat bercak hitam, maka kemungkinan Karat Daun)
+
+P3 → H3
+(Jika daun berlubang, maka kemungkinan Serangan Kumbang)
+
+P4 → H4
+(Jika tanaman layu, maka kemungkinan Busuk Bakteri)
+
+Gabungan: 5. (P1 ∧ P2) → (H1 ∧ H2)
+(Jika daun menguning dan terdapat bercak hitam, maka kemungkinan terjadi Busuk Akar dan Karat Daun)
+
+(P4 ∧ ¬P1 ∧ ¬P2 ∧ ¬P3) → H4
+(Jika tanaman layu, dan tidak ada daun menguning, tidak ada bercak hitam, dan tidak ada daun berlubang, maka kemungkinan besar Busuk Bakteri)
+
+3. Penjelasan Sistem Inferensi:
+Input: Data gejala dari tanaman (bercak hitam, daun menguning, daun berlubang, tanaman layu).
+Inferensi: Sistem akan mengecek fakta dan aturan yang sudah dibuat menggunakan metode forward chaining (mencocokkan fakta secara maju).
+
+Output: Menentukan diagnosis jenis penyakit tanaman berdasarkan gejala yang ditemukan.
